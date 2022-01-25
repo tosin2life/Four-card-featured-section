@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+$VeryDarkBlue: hsl(234, 12%, 34%);
+$GrayishBlue: hsl(229, 6%, 66%);
+$VeryLightGray: hsl(0, 0%, 98%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+}
+.container {
+  //   max-width: 425px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: $VeryLightGray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  .header {
+    padding: 2rem;
+    text-align: center;
+    h1 {
+      color: $VeryDarkBlue;
+      font-size: 3rem;
+      font-weight: 400;
+    }
+    h2 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    p {
+      color: $GrayishBlue;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 4rem;
+    }
+  }
+  .card {
+    padding: 0 2rem;
+    .card-item {
+      //   max-width: 450px;
+      padding: 2rem;
+      width: 100%;
+      border-radius: 0.5rem;
+      box-shadow: 2px 8px 14px 0px $GrayishBlue;
+      margin-bottom: 3rem;
+    }
+    .card-item {
+      h3 {
+        font-size: 2.5rem;
+        color: $VeryDarkBlue;
+        font-weight: 600;
+      }
+      p {
+        color: $GrayishBlue;
+        font-size: 1.7rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .card {
+    .card-item.one {
+      border-top: 5px solid $Cyan;
+    }
+    .card-item.two {
+      border-top: 5px solid $Red;
+    }
+    .card-item.three {
+      border-top: 5px solid $Orange;
+    }
+    .card-item.four {
+      border-top: 5px solid $Blue;
+    }
+    img {
+      display: block;
+      margin-top: 5rem;
+      margin-bottom: 1rem;
+      margin-left: auto;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    padding: 0 4rem;
+    .header {
+      h1,
+      h2 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 2rem;
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+
+    .card {
+      display: flex;
+      flex-direction: row;
+
+      .col-1 {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .col-2 {
+        flex: 1;
+        padding: 3rem;
+      }
+      .col-3 {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
